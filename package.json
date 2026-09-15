@@ -1,0 +1,23 @@
+{
+  "name": "epicbet-playwright-tests",
+  "version": "1.0.0",
+  "description": "Playwright end-to-end test suite for the Epicbet sportsbook QA automation assignment",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "playwright test --project=chromium",
+    "test:all": "playwright test",
+    "test:smoke": "playwright test --grep @smoke --project=chromium",
+    "test:critical": "playwright test --grep @critical --project=chromium",
+    "test:regression": "playwright test --grep @regression --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:list": "playwright test --list --project=chromium",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.20.2",
+    "typescript": "^7.0.2"
+  }
+}
