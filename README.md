@@ -226,3 +226,19 @@ The tests use Playwright waiting and polling instead of fixed sleeps.
 - stable test data or a dedicated test environment;
 - API-assisted test setup;
 - automated nightly regression runs.
+
+## Production Environment
+
+The tests use the real Epicbet website instead of mocked responses.
+
+Because of this, execution can be affected by:
+
+- live event availability;
+- changing odds;
+- geo restrictions;
+- Cloudflare;
+- production throttling.
+
+GitHub-hosted runners may be affected by Epicbet geo restrictions depending on runner location.
+
+In a larger real project, I would use stable test data or a controlled test environment for the main regression suite and keep a smaller set of live production smoke tests.
